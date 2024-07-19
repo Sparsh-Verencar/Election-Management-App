@@ -1,0 +1,18 @@
+body{
+    background-color: black;
+    width: auto;
+    height: 100vh;
+}
+
+.Login-body{
+    background-color: lightskyblue;
+    border: 2px solid red;
+    font-size: 2rem;
+    display: flexbox;
+    margin: 40vh;
+
+}
+
+.Login-title{
+    color:white;
+}
