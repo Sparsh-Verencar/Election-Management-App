@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+}
+
+.stats {
+    display: flex;
+    place-content: space-around;
+}
+
+.stats .card{
+    border: 2px solid red;
+    padding: 3vw;
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+}
+
