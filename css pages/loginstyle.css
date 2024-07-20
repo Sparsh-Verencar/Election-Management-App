@@ -5,7 +5,7 @@ body{
 }
 
 .Login-body{
-    background-color: lightskyblue;
+    background-color: transparent;
     border: 2px solid red;
     font-size: 2rem;
     display: flexbox;
@@ -15,4 +15,16 @@ body{
 
 .Login-title{
     color:white;
+}
+
+button a{
+    cursor: pointer;
+    color: inherit;
+}
+
+button{
+    box-shadow: none;
+    border-radius: 50px;
+    color: black;
+    background-color: antiquewhite;
 }
