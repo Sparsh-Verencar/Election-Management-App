@@ -11,24 +11,39 @@
 <body>
     <center>
         <div class="Login-body">
-            <form>
+            <form method="post" id="form">
                 <div class="Login-title">Login</div>
-                <input type="text" placeholder="username">
+                <input type="text" placeholder="username" name="name" required>
                 <br>
-                <input type="email" placeholder="student email">
+                <input type="email" placeholder="student email" name="email" required>
                 <br>
-                <input type="password" placeholder="password">
+                <input type="password" placeholder="password" name="password" required>
                 <br>
                 <button>
-                    <a href="homepage.html">
-                        Submit
-                    </a>
+                    Submit
+                   <!--  <a href="homepage.html">
+                    </a> -->
                 </button>
                 <button type="reset">Reset</button>
             </form>
         </div>
     </center>
-
 </body>
+<script>
+    let url = "https://script.google.com/macros/s/AKfycbyUfvln41vVZ90yZe6iJG3xUt6U3kfo-E6x-dXKuo55jrlKxx6AkFUpXfSnJHs4ULY/exec";
+    let form = document.querySelector('#form');
+    form.addEventListener("submit", (e)=>{
+        let d = new FormData(form);
+        fetch(url, {
+            method: "POST",
+            body:d
+        }).then((res)=>res.text())
+        .then((finalRes=>{
+            form.reset();
+            console.log(finalRes);
+        }))
+        e.preventDefault();
+    })
+</script>
 
 </html>
